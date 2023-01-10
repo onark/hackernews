@@ -23,8 +23,9 @@ const App = () => {
 
   return (
     <div className="content-wrapper">
-      {loading ? <LoadingSpinner /> : <News stories={stories}/>}
-      <Pagination page={page} setPage={setPage}/>
+      <h2 className="header">Top Stories</h2>
+      {loading ? <LoadingSpinner /> : <News stories={stories} />}
+      <Pagination page={page} setPage={setPage} />
     </div>
   );
 }
