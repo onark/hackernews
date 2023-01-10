@@ -1,0 +1,39 @@
+$primary-color: #6200ee;
+$secondary-color: #99e2f8;
+
+.header {
+  color: $primary-color;
+}
+
+.pagination-button {
+  background-color: $secondary-color;
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+@mixin grid-container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.news-wrapper {
+  @include grid-container;
+}
+
+.story-wrapper {
+  &[data-is-featured='true'] {
+    border: 2px solid $primary-color;
+  }
+  &[data-is-featured='false'] {
+    border: 2px solid $secondary-color;
+  }
+}
+
+.story-title {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
