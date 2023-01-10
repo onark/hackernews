@@ -1,5 +1,5 @@
 $primary-color: #6200ee;
-$secondary-color: #99e2f8;
+$secondary-color: #beedfc;
 
 .header {
   color: $primary-color;
@@ -19,15 +19,6 @@ $secondary-color: #99e2f8;
 
 .news-wrapper {
   @include grid-container;
-}
-
-.story-wrapper {
-  &[data-is-featured='true'] {
-    border: 2px solid $primary-color;
-  }
-  &[data-is-featured='false'] {
-    border: 2px solid $secondary-color;
-  }
 }
 
 .story-title {
